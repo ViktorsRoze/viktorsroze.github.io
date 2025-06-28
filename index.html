@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- import the webpage's stylesheet -->
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="style.css" />
 
     <!-- import the latest version of hydra synth-->
     <script src="https://unpkg.com/hydra-synth"></script>
@@ -1128,98 +1128,3 @@
     </script>
   </body>
 </html>
-
-
-
-/* CSS files add styling rules to your content */
-
-body,
-html {
-  font-family: helvetica, arial, sans-serif;
-  margin: 10px;
-  /*  background-color: pink; */
-}
-
-h1 {
-  font-style: italic;
-  color: white;
-  font-size: 15px;
-  margin: 50px;
-  mix-blend-mode: difference;
-  text-align: center;
-  justify-content: center;
-}
-h2 {
-/*   font-style: italic; */
-  color: #a020f0;
-  font-size: 40px;
-  font-style: bold;
-  margin: -100px;
-  mix-blend-mode: difference;
-  text-align: center;
-}
-#idk  {
-/*   max-width: 600px; */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: -130px;
-}
-  .waviy {
-  position: relative;
-    width: 200px;
-    text-align: center;
-    mix-blend-mode: difference;
-}
-  .waviy span {
-  position: relative;
-  display: inline-block;
-  color: white;
-  font-size: 35px;
-  text-transform: uppercase;
-  animation: flip 6s infinite;
-  animation-delay: calc(.5s * var(--i))
-}
-  @keyframes flip {
-    0%,
-    30% {
-      transform: rotateY(360deg);
-    }
-  }
-
-
-
-button {
-  display: inline-block;
-  background-color: white;
-  mix-blend-mode: difference;
-  border-radius: 8px;
-  border: 2px;
-  font-size: 16px;
-  font-style: bold;
-  padding: 10px 24px;
-  margin: 10px;
-  width: 120px;
-  height: 40px;
-  justify-content: center;
-}
-button:hover {
-  font-style: bold;
-  background-color: yellow;
-  mix-blend-mode: difference;
-}
-
-
-#myCanvas {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  z-index: -4;
-}
-
-
-
-
-
