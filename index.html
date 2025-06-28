@@ -1,0 +1,1225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MSV/TREPS</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- import the latest version of hydra synth-->
+    <script src="https://unpkg.com/hydra-synth"></script>
+  </head>
+  <body>
+    <h1>by MSV</h1>
+    <div id="idk">
+      <button onclick="goToPrevious()">(っ˘ ³˘)っ</button>
+      <div class="waviy">
+        <span style="--i: 1">♥</span> <span style="--i: 2">♥</span>
+        <span style="--i: 3">♥</span>
+      </div>
+      <button onclick="goToNext()">( ͡°ω ͡°)</button>
+    </div>
+
+    <!--    <button id= onclick="goToPrevious()">PREV</button> -->
+    <!--    <button onclick="goToNext()">NEXT</button> -->
+
+    <canvas id="myCanvas" width="400px" height="400px"></canvas>
+
+    <script>
+      // create a new hydra-synth instance
+      var hydra = new Hydra({
+        canvas: document.getElementById("myCanvas"),
+        detectAudio: false,
+      });
+      setResolution(window.innerWidth, window.innerHeight);
+      osc(7, -0.1, 2).rotate(0, 0.1).pixelate(60, 30).out(o0);
+      src(o0)
+        .modulateScale(src(o0), 3.2)
+        .scale(1, 0.6)
+        .modulateKaleid(src(o0), 0.1)
+        .modulate(src(o0), 0.3)
+        .mult(solid(1, 1, 0.3))
+        .invert()
+        .out(o1);
+      src(o1).invert().modulate(src(o1), 0.3).out(o2);
+      src(o1).modulate(src(o2), 0.06).rotate(3.124).out(o3);
+      render(o0);
+
+      const mySketches = [
+        invertSlip0,
+        grusgrus,
+        invertSlip1,
+        vilnis20,
+        modularFluid2,
+        invertFluid,
+        modularKaleid2,
+
+        invertSlip2,
+        vilnis1,
+        modularFluid,
+        invertFluid1,
+        vilnisKaleid0,
+
+        vilnis2,
+        modularFluid3,
+        invertSlip3,
+        vilnisKaleid3,
+        vilnis3,
+        invertFluid3,
+        modularKaleid3,
+        vilnis22,
+        vilnisKaleid2,
+        modularKaleid1,
+
+        modularFluid1,
+        vilnis21,
+        invertFluid2,
+        vilnis23,
+
+        //    vilnis0,
+
+        vilnisKaleid1,
+      ];
+
+      let currentSketch = 0;
+
+      function goToNext() {
+        currentSketch++;
+
+        if (currentSketch >= mySketches.length) currentSketch = 0;
+        mySketches[currentSketch]();
+      }
+
+      function goToPrevious() {
+        currentSketch--;
+
+        if (currentSketch < 0) currentSketch = mySketches.length - 1;
+        mySketches[currentSketch]();
+      }
+      // create functions to use with buttons
+      function invertSlip0() {
+        //by TREPS
+        //INVERT SLIP0
+
+        osc(7, -0.1, 2).rotate(0, 0.1).pixelate(60, 30).out(o0);
+        src(o0)
+          .modulateScale(src(o0), 3.2)
+          .scale(1, 0.6)
+          .modulateKaleid(src(o0), 0.1)
+          .modulate(src(o0), 0.3)
+          .mult(solid(1, 1, 0.3))
+          .invert()
+          .out(o1);
+        src(o1).invert().modulate(src(o1), 0.3).out(o2);
+        src(o1).modulate(src(o2), 0.06).rotate(3.124).out(o3);
+        render(o0);
+      }
+      function invertSlip1() {
+        //by TREPS
+        //INVERT SLIP1
+
+        osc(7, -0.1, 2).rotate(0, 0.1).pixelate(60, 30).out(o0);
+        src(o0)
+          .modulateScale(src(o0), 3.2)
+          .scale(1, 0.6)
+          .modulateKaleid(src(o0), 0.1)
+          .modulate(src(o0), 0.3)
+          .mult(solid(1, 1, 0.3))
+          .invert()
+          .out(o1);
+        src(o1).invert().modulate(src(o1), 0.3).out(o2);
+        src(o1).modulate(src(o2), 0.06).rotate(3.124).out(o3);
+        render(o1);
+      }
+      function invertSlip2() {
+        //by TREPS
+        //INVERT SLIP2
+
+        osc(7, -0.1, 2).rotate(0, 0.1).pixelate(60, 30).out(o0);
+        src(o0)
+          .modulateScale(src(o0), 3.2)
+          .scale(1, 0.6)
+          .modulateKaleid(src(o0), 0.1)
+          .modulate(src(o0), 0.3)
+          .mult(solid(1, 1, 0.3))
+          .invert()
+          .out(o1);
+        src(o1).invert().modulate(src(o1), 0.3).out(o2);
+        src(o1).modulate(src(o2), 0.06).rotate(3.124).out(o3);
+        render(o2);
+      }
+
+      function invertSlip3() {
+        //by TREPS
+        //INVERT SLIP3
+
+        osc(7, -0.1, 2).rotate(0, 0.1).pixelate(60, 30).out(o0);
+        src(o0)
+          .modulateScale(src(o0), 3.2)
+          .scale(1, 0.6)
+          .modulateKaleid(src(o0), 0.1)
+          .modulate(src(o0), 0.3)
+          .mult(solid(1, 1, 0.3))
+          .invert()
+          .out(o1);
+        src(o1).invert().modulate(src(o1), 0.3).out(o2);
+        src(o1).modulate(src(o2), 0.06).rotate(3.124).out(o3);
+        render(o3);
+      }
+      function invertFluid() {
+        //by Treps
+        //INVERT FLUID
+
+        osc(7, -0.1, 2)
+          //	.pixelate(80, 40)
+          .rotate(1.55)
+          .out(o0);
+        src(o0)
+          .modulateKaleid(src(o0), 5)
+          .blend(src(o0))
+          .scale(1, 0.6)
+          .modulate(src(o0), 0.3)
+          .mult(solid(1, 1, 0.3))
+          .saturate()
+          .invert()
+          .luma(0.02, 0.01)
+          //.diff(src(o1))
+          //.invert()
+          .out(o1);
+        src(o1).modulate(src(o1)).out(o2);
+        src(o2)
+          .modulate(src(o2))
+          //.modulate(src(o1), .6)
+          .rotate(3.14)
+          .out(o3);
+
+        render(o0);
+      }
+      function invertFluid1() {
+        //by Treps
+        //INVERT FLUID1
+
+        osc(7, -0.1, 2)
+          //	.pixelate(80, 40)
+          .rotate(1.55)
+          .out(o0);
+        src(o0)
+          .modulateKaleid(src(o0), 5)
+          .blend(src(o0))
+          .scale(1, 0.6)
+          .modulate(src(o0), 0.3)
+          .mult(solid(1, 1, 0.3))
+          .saturate()
+          .invert()
+          .luma(0.02, 0.01)
+          //.diff(src(o1))
+          //.invert()
+          .out(o1);
+        src(o1).modulate(src(o1)).out(o2);
+        src(o2)
+          .modulate(src(o2))
+          //.modulate(src(o1), .6)
+          .rotate(3.14)
+          .out(o3);
+
+        render(o1);
+      }
+      function invertFluid2() {
+        //by Treps
+        //INVERT FLUID2
+
+        osc(7, -0.1, 2)
+          //	.pixelate(80, 40)
+          .rotate(1.55)
+          .out(o0);
+        src(o0)
+          .modulateKaleid(src(o0), 5)
+          .blend(src(o0))
+          .scale(1, 0.6)
+          .modulate(src(o0), 0.3)
+          .mult(solid(1, 1, 0.3))
+          .saturate()
+          .invert()
+          .luma(0.02, 0.01)
+          //.diff(src(o1))
+          //.invert()
+          .out(o1);
+        src(o1).modulate(src(o1)).out(o2);
+        src(o2)
+          .modulate(src(o2))
+          //.modulate(src(o1), .6)
+          .rotate(3.14)
+          .out(o3);
+
+        render(o2);
+      }
+      function invertFluid3() {
+        //by Treps
+        //INVERT FLUID3
+
+        osc(7, -0.1, 2)
+          //	.pixelate(80, 40)
+          .rotate(1.55)
+          .out(o0);
+        src(o0)
+          .modulateKaleid(src(o0), 5)
+          .blend(src(o0))
+          .scale(1, 0.6)
+          .modulate(src(o0), 0.3)
+          .mult(solid(1, 1, 0.3))
+          .saturate()
+          .invert()
+          .luma(0.02, 0.01)
+          //.diff(src(o1))
+          //.invert()
+          .out(o1);
+        src(o1).modulate(src(o1)).out(o2);
+        src(o2)
+          .modulate(src(o2))
+          //.modulate(src(o1), .6)
+          .rotate(3.14)
+          .out(o3);
+
+        render(o3);
+      }
+      function modularFluid() {
+        //by Treps
+        //MODULAR FLUID
+
+        osc(7, 0.1, 2)
+          .pixelate(80, 40)
+          .blend(osc(7, 0.1, 2).pixelate(80, 40))
+          .modulateKaleid(
+            osc(7, 0.1, 2).pixelate(80, 40),
+            [5, 6, 7, 6].smooth().fast(1)
+          )
+          //	.blend(osc(7, .1, 2)
+          //	.pixelate(80, 40))
+          .scale(1, 0.6)
+          .modulate(osc(7, 0.1, 2).pixelate(80, 40), 0.3)
+          .mult(solid(1, 1, 0.3))
+          .saturate()
+          .invert()
+          .luma(0.02, 0.01)
+          .diff(src(o1))
+          .invert()
+          .saturate()
+
+          .out(o0);
+
+        src(o0)
+          //	.diff(src(o1))
+          .blend(osc(7, 0.1, 2).pixelate(80, 40))
+          .saturate()
+          .hue(() => a.fft[1])
+          .mult(solid(1, 0.2, 0.6))
+
+          .out(o1);
+
+        src(o0)
+          .diff(src(o2))
+          .blend(osc(7, 0.1, 2).pixelate(80, 40))
+          .saturate()
+          .hue(() => a.fft[1])
+          .mult(solid(0.75, 0.2, 0.85, 1))
+          .blend(src(o2))
+          //	.diff(o0)
+          .scale(2)
+          .out(o2);
+
+        src(o0)
+          .diff(src(o2))
+          .blend(osc(7, 0.1, 2).pixelate(80, 40))
+          .saturate()
+          .hue(() => a.fft[1])
+          .mult(solid(0.75, 0.2, 0.85, 1))
+          .blend(src(o2))
+          .diff(o0)
+          .scale(3, -0.2)
+          .out(o3);
+
+        render(o0);
+      }
+      function modularFluid1() {
+        //by Treps
+        //MODULAR FLUID1
+
+        osc(7, 0.1, 2)
+          .pixelate(80, 40)
+          .blend(osc(7, 0.1, 2).pixelate(80, 40))
+          .modulateKaleid(
+            osc(7, 0.1, 2).pixelate(80, 40),
+            [5, 6, 7, 6].smooth().fast(1)
+          )
+          //	.blend(osc(7, .1, 2)
+          //	.pixelate(80, 40))
+          .scale(1, 0.6)
+          .modulate(osc(7, 0.1, 2).pixelate(80, 40), 0.3)
+          .mult(solid(1, 1, 0.3))
+          .saturate()
+          .invert()
+          .luma(0.02, 0.01)
+          .diff(src(o1))
+          .invert()
+          .saturate()
+
+          .out(o0);
+
+        src(o0)
+          //	.diff(src(o1))
+          .blend(osc(7, 0.1, 2).pixelate(80, 40))
+          .saturate()
+          .hue(() => a.fft[1])
+          .mult(solid(1, 0.2, 0.6))
+
+          .out(o1);
+
+        src(o0)
+          .diff(src(o2))
+          .blend(osc(7, 0.1, 2).pixelate(80, 40))
+          .saturate()
+          .hue(() => a.fft[1])
+          .mult(solid(0.75, 0.2, 0.85, 1))
+          .blend(src(o2))
+          //	.diff(o0)
+          .scale(2)
+          .out(o2);
+
+        src(o0)
+          .diff(src(o2))
+          .blend(osc(7, 0.1, 2).pixelate(80, 40))
+          .saturate()
+          .hue(() => a.fft[1])
+          .mult(solid(0.75, 0.2, 0.85, 1))
+          .blend(src(o2))
+          .diff(o0)
+          .scale(3, -0.2)
+          .out(o3);
+
+        render(o1);
+      }
+      function modularFluid2() {
+        //by Treps
+        //MODULAR FLUID2
+
+        osc(7, 0.1, 2)
+          .pixelate(80, 40)
+          .blend(osc(7, 0.1, 2).pixelate(80, 40))
+          .modulateKaleid(
+            osc(7, 0.1, 2).pixelate(80, 40),
+            [5, 6, 7, 6].smooth().fast(1)
+          )
+          //	.blend(osc(7, .1, 2)
+          //	.pixelate(80, 40))
+          .scale(1, 0.6)
+          .modulate(osc(7, 0.1, 2).pixelate(80, 40), 0.3)
+          .mult(solid(1, 1, 0.3))
+          .saturate()
+          .invert()
+          .luma(0.02, 0.01)
+          .diff(src(o1))
+          .invert()
+          .saturate()
+
+          .out(o0);
+
+        src(o0)
+          //	.diff(src(o1))
+          .blend(osc(7, 0.1, 2).pixelate(80, 40))
+          .saturate()
+          .hue(() => a.fft[1])
+          .mult(solid(1, 0.2, 0.6))
+
+          .out(o1);
+
+        src(o0)
+          .diff(src(o2))
+          .blend(osc(7, 0.1, 2).pixelate(80, 40))
+          .saturate()
+          .hue(() => a.fft[1])
+          .mult(solid(0.75, 0.2, 0.85, 1))
+          .blend(src(o2))
+          //	.diff(o0)
+          .scale(2)
+          .out(o2);
+
+        src(o0)
+          .diff(src(o2))
+          .blend(osc(7, 0.1, 2).pixelate(80, 40))
+          .saturate()
+          .hue(() => a.fft[1])
+          .mult(solid(0.75, 0.2, 0.85, 1))
+          .blend(src(o2))
+          .diff(o0)
+          .scale(3, -0.2)
+          .out(o3);
+
+        render(o2);
+      }
+      function modularFluid3() {
+        //by Treps
+        //MODULAR FLUID3
+
+        osc(7, 0.1, 2)
+          .pixelate(80, 40)
+          .blend(osc(7, 0.1, 2).pixelate(80, 40))
+          .modulateKaleid(
+            osc(7, 0.1, 2).pixelate(80, 40),
+            [5, 6, 7, 6].smooth().fast(1)
+          )
+          //	.blend(osc(7, .1, 2)
+          //	.pixelate(80, 40))
+          .scale(1, 0.6)
+          .modulate(osc(7, 0.1, 2).pixelate(80, 40), 0.3)
+          .mult(solid(1, 1, 0.3))
+          .saturate()
+          .invert()
+          .luma(0.02, 0.01)
+          .diff(src(o1))
+          .invert()
+          .saturate()
+
+          .out(o0);
+
+        src(o0)
+          //	.diff(src(o1))
+          .blend(osc(7, 0.1, 2).pixelate(80, 40))
+          .saturate()
+          .hue(() => a.fft[1])
+          .mult(solid(1, 0.2, 0.6))
+
+          .out(o1);
+
+        src(o0)
+          .diff(src(o2))
+          .blend(osc(7, 0.1, 2).pixelate(80, 40))
+          .saturate()
+          .hue(() => a.fft[1])
+          .mult(solid(0.75, 0.2, 0.85, 1))
+          .blend(src(o2))
+          //	.diff(o0)
+          .scale(2)
+          .out(o2);
+
+        src(o0)
+          .diff(src(o2))
+          .blend(osc(7, 0.1, 2).pixelate(80, 40))
+          .saturate()
+          .hue(() => a.fft[1])
+          .mult(solid(0.75, 0.2, 0.85, 1))
+          .blend(src(o2))
+          .diff(o0)
+          .scale(3, -0.2)
+          .out(o3);
+
+        render(o3);
+      }
+      function modularKaleid1() {
+        //by Treps
+        //MODULAR KALEID1
+
+        osc(7, 0.1, 2).pixelate(40, 20).out(o0);
+        src(o0)
+          .modulateKaleid(src(o0), 5)
+          .scale(1, 0.6)
+          .modulate(src(o0), 0.3)
+          .mult(solid(1, 1, 0.3))
+          .out(o1);
+        src(o1)
+          .invert()
+          //.modulate(src(o1), .3)
+          .out(o2);
+        osc(7, 0.1, 2)
+          .pixelate(40, 20)
+          .modulateKaleid(osc(7, 0.1, 2), 5)
+          .scale(1, 0.6)
+          .modulate(src(o1), 0.3)
+          .mult(solid(1, 1, 0.3))
+          .out(o3);
+
+        render(o1);
+      }
+      function modularKaleid2() {
+        //by Treps
+        //MODULAR KALEID2
+
+        osc(7, 0.1, 2).pixelate(40, 20).out(o0);
+        src(o0)
+          .modulateKaleid(src(o0), 5)
+          .scale(1, 0.6)
+          .modulate(src(o0), 0.3)
+          .mult(solid(1, 1, 0.3))
+          .out(o1);
+        src(o1)
+          .invert()
+          //.modulate(src(o1), .3)
+          .out(o2);
+        osc(7, 0.1, 2)
+          .pixelate(40, 20)
+          .modulateKaleid(osc(7, 0.1, 2), 5)
+          .scale(1, 0.6)
+          .modulate(src(o1), 0.3)
+          .mult(solid(1, 1, 0.3))
+          .out(o3);
+
+        render(o2);
+      }
+      function modularKaleid3() {
+        //by Treps
+        //MODULAR KALEID3
+
+        osc(7, 0.1, 2).pixelate(40, 20).out(o0);
+        src(o0)
+          .modulateKaleid(src(o0), 5)
+          .scale(1, 0.6)
+          .modulate(src(o0), 0.3)
+          .mult(solid(1, 1, 0.3))
+          .out(o1);
+        src(o1)
+          .invert()
+          //.modulate(src(o1), .3)
+          .out(o2);
+        osc(7, 0.1, 2)
+          .pixelate(40, 20)
+          .modulateKaleid(osc(7, 0.1, 2), 5)
+          .scale(1, 0.6)
+          .modulate(src(o1), 0.3)
+          .mult(solid(1, 1, 0.3))
+          .out(o3);
+
+        render(o3);
+      }
+      function vilnis0() {
+        //by Treps
+        //VILNIS0
+
+        osc(7, 0.1, 2).pixelate(40, 20).out(o0);
+
+        osc(-7, -0.1, 2).pixelate(80, 40).out(o2);
+
+        src(o2)
+          .modulate(osc(7, -0.1, 2), 0.3)
+          .rotate(1.57)
+          .modulateScale(osc(7, -0.1, 2), 1.5, 2.5)
+          //.kaleid(1).repeat(1,1)
+          .invert()
+
+          .out(o3);
+
+        src(o0)
+          .modulate(src(o2), 0.3)
+          .rotate(1.57)
+          .modulateScale(osc(7, -0.1, 2), 1.5, 2.5)
+          //.kaleid(1).repeat(1,1)
+          .invert()
+
+          .out(o1);
+
+        render(o0);
+      }
+      function vilnis1() {
+        //by Treps
+        //VILNIS1
+
+        osc(7, 0.1, 2).pixelate(40, 20).out(o0);
+
+        osc(-7, -0.1, 2).pixelate(80, 40).out(o2);
+
+        src(o2)
+          .modulate(osc(7, -0.1, 2), 0.3)
+          .rotate(1.57)
+          .modulateScale(osc(7, -0.1, 2), 1.5, 2.5)
+          //.kaleid(1).repeat(1,1)
+          .invert()
+
+          .out(o3);
+
+        src(o0)
+          .modulate(src(o2), 0.3)
+          .rotate(1.57)
+          .modulateScale(osc(7, -0.1, 2), 1.5, 2.5)
+          //.kaleid(1).repeat(1,1)
+          .invert()
+
+          .out(o1);
+
+        render(o1);
+      }
+      function vilnis2() {
+        //by Treps
+        //VILNIS2
+
+        osc(7, 0.1, 2).pixelate(40, 20).out(o0);
+
+        osc(-7, -0.1, 2).pixelate(80, 40).out(o2);
+
+        src(o2)
+          .modulate(osc(7, -0.1, 2), 0.3)
+          .rotate(1.57)
+          .modulateScale(osc(7, -0.1, 2), 1.5, 2.5)
+          //.kaleid(1).repeat(1,1)
+          .invert()
+
+          .out(o3);
+
+        src(o0)
+          .modulate(src(o2), 0.3)
+          .rotate(1.57)
+          .modulateScale(osc(7, -0.1, 2), 1.5, 2.5)
+          //.kaleid(1).repeat(1,1)
+          .invert()
+
+          .out(o1);
+
+        render(o2);
+      }
+      function vilnis3() {
+        //by Treps
+        //VILNIS3
+
+        osc(7, 0.1, 2).pixelate(40, 20).out(o0);
+
+        osc(-7, -0.1, 2).pixelate(80, 40).out(o2);
+
+        src(o2)
+          .modulate(osc(7, -0.1, 2), 0.3)
+          .rotate(1.57)
+          .modulateScale(osc(7, -0.1, 2), 1.5, 2.5)
+          //.kaleid(1).repeat(1,1)
+          .invert()
+
+          .out(o3);
+
+        src(o0)
+          .modulate(src(o2), 0.3)
+          .rotate(1.57)
+          .modulateScale(osc(7, -0.1, 2), 1.5, 2.5)
+          //.kaleid(1).repeat(1,1)
+          .invert()
+
+          .out(o1);
+
+        render(o3);
+      }
+
+      function vilnis20() {
+        //by TREPS
+        //VILNIS20
+
+        osc(7, 0.1, 2)
+          .pixelate(40, 20)
+          .modulate(osc(-7, -0.1, 2), 0.3)
+          .rotate(1.57)
+          .modulateScale(osc(7, -0.1, 2), 1.5, 2.5)
+
+          .invert()
+          .out(o0);
+
+        osc(-7, -0.1, 2)
+          .pixelate(80, 40)
+          .modulate(osc(7, -0.1, 2), 0.3)
+          .rotate(1.57)
+          .modulateScale(osc(7, -0.1, 2), 1.5, 2.5)
+          .modulate(src(o0), 0)
+          //.kaleid(1).repeat(1,1)
+          .invert()
+
+          .out(o3);
+
+        osc(-7, -0.1, 2)
+          .pixelate(80, 40)
+          .modulate(osc(7, 0.1, 2), 0.3)
+          .rotate(1.57)
+          .modulateScale(osc(7, -0.1, 2), 1.5, 2.5)
+          .modulate(src(o0), 0)
+          //.kaleid(1).repeat(1,1)
+          .invert()
+
+          .out(o2);
+
+        src(o0)
+          .diff(src(o2))
+          .saturate()
+          //	.rotate(1.57)
+          //	.modulateScale(osc(7, -.1, 2), 1.5, .5)
+          //.kaleid(2).repeat(1,1)
+          //.invert()
+
+          .out(o1);
+
+        render(o0);
+      }
+      function vilnis21() {
+        //by TREPS
+        //VILNIS21
+
+        osc(7, 0.1, 2)
+          .pixelate(40, 20)
+          .modulate(osc(-7, -0.1, 2), 0.3)
+          .rotate(1.57)
+          .modulateScale(osc(7, -0.1, 2), 1.5, 2.5)
+
+          .invert()
+          .out(o0);
+
+        osc(-7, -0.1, 2)
+          .pixelate(80, 40)
+          .modulate(osc(7, -0.1, 2), 0.3)
+          .rotate(1.57)
+          .modulateScale(osc(7, -0.1, 2), 1.5, 2.5)
+          .modulate(src(o0), 0)
+          //.kaleid(1).repeat(1,1)
+          .invert()
+
+          .out(o3);
+
+        osc(-7, -0.1, 2)
+          .pixelate(80, 40)
+          .modulate(osc(7, 0.1, 2), 0.3)
+          .rotate(1.57)
+          .modulateScale(osc(7, -0.1, 2), 1.5, 2.5)
+          .modulate(src(o0), 0)
+          //.kaleid(1).repeat(1,1)
+          .invert()
+
+          .out(o2);
+
+        src(o0)
+          .diff(src(o2))
+          .saturate()
+          //	.rotate(1.57)
+          //	.modulateScale(osc(7, -.1, 2), 1.5, .5)
+          //.kaleid(2).repeat(1,1)
+          //.invert()
+
+          .out(o1);
+
+        render(o1);
+      }
+      function vilnis22() {
+        //by TREPS
+        //VILNIS22
+
+        osc(7, 0.1, 2)
+          .pixelate(40, 20)
+          .modulate(osc(-7, -0.1, 2), 0.3)
+          .rotate(1.57)
+          .modulateScale(osc(7, -0.1, 2), 1.5, 2.5)
+
+          .invert()
+          .out(o0);
+
+        osc(-7, -0.1, 2)
+          .pixelate(80, 40)
+          .modulate(osc(7, -0.1, 2), 0.3)
+          .rotate(1.57)
+          .modulateScale(osc(7, -0.1, 2), 1.5, 2.5)
+          .modulate(src(o0), 0)
+          //.kaleid(1).repeat(1,1)
+          .invert()
+
+          .out(o3);
+
+        osc(-7, -0.1, 2)
+          .pixelate(80, 40)
+          .modulate(osc(7, 0.1, 2), 0.3)
+          .rotate(1.57)
+          .modulateScale(osc(7, -0.1, 2), 1.5, 2.5)
+          .modulate(src(o0), 0)
+          //.kaleid(1).repeat(1,1)
+          .invert()
+
+          .out(o2);
+
+        src(o0)
+          .diff(src(o2))
+          .saturate()
+          //	.rotate(1.57)
+          //	.modulateScale(osc(7, -.1, 2), 1.5, .5)
+          //.kaleid(2).repeat(1,1)
+          //.invert()
+
+          .out(o1);
+
+        render(o2);
+      }
+      function vilnis23() {
+        //by TREPS
+        //VILNIS23
+
+        osc(7, 0.1, 2)
+          .pixelate(40, 20)
+          .modulate(osc(-7, -0.1, 2), 0.3)
+          .rotate(1.57)
+          .modulateScale(osc(7, -0.1, 2), 1.5, 2.5)
+
+          .invert()
+          .out(o0);
+
+        osc(-7, -0.1, 2)
+          .pixelate(80, 40)
+          .modulate(osc(7, -0.1, 2), 0.3)
+          .rotate(1.57)
+          .modulateScale(osc(7, -0.1, 2), 1.5, 2.5)
+          .modulate(src(o0), 0)
+          //.kaleid(1).repeat(1,1)
+          .invert()
+
+          .out(o3);
+
+        osc(-7, -0.1, 2)
+          .pixelate(80, 40)
+          .modulate(osc(7, 0.1, 2), 0.3)
+          .rotate(1.57)
+          .modulateScale(osc(7, -0.1, 2), 1.5, 2.5)
+          .modulate(src(o0), 0)
+          //.kaleid(1).repeat(1,1)
+          .invert()
+
+          .out(o2);
+
+        src(o0)
+          .diff(src(o2))
+          .saturate()
+          //	.rotate(1.57)
+          //	.modulateScale(osc(7, -.1, 2), 1.5, .5)
+          //.kaleid(2).repeat(1,1)
+          //.invert()
+
+          .out(o1);
+
+        render(o3);
+      }
+      function vilnisKaleid0() {
+        //by TREPS
+        //VILNIS KALEID0
+
+        osc(7, 0.01, 2)
+          .pixelate(40, 20)
+          .modulate(osc(-7, -0.1, 2), 0.3)
+          .rotate(1.57)
+          .modulateScale(osc(7, -0.01, 2), 1.5, 1.5)
+          .kaleid()
+          .invert()
+          .out(o0);
+
+        osc(-7, -0.01, 2)
+          .pixelate(80, 40)
+          .modulate(osc(7, -0.02, 2), 0.3)
+          .rotate(1.57)
+          .modulateScale(osc(7, -0.03, 2), 1.5, 2.5)
+          .modulate(src(o0), 0)
+          .kaleid(8)
+          .repeat()
+          .invert()
+
+          .out(o3);
+
+        osc(-7, -0.01, 2)
+          .pixelate(80, 40)
+          .modulate(osc(7, 0.01, 2), 0.3)
+          .rotate(1.57)
+          .modulateScale(osc(7, -0.1, 2), 1.5, 2.5)
+          .modulate(src(o0), 0)
+          .kaleid(2)
+          .repeat(1)
+          .invert()
+
+          .out(o2);
+
+        //src(o0)
+        osc(7, 0.01, 2)
+          .pixelate(40, 20)
+          .modulate(osc(-7, -0.01, 2), 0.3)
+          .rotate(1.57)
+          .modulateScale(osc(7, -0.01, 2), 1.5, 1.5)
+          .kaleid()
+          .invert()
+          .modulate(src(o2), 0.3)
+          .rotate(1.57)
+          .modulateScale(osc(7, -0.1, 2), 1.5, 0.5)
+          .kaleid(2)
+          .repeat(1, 1)
+          .scale(0.6)
+          .invert()
+
+          .out(o1);
+
+        render(o0);
+      }
+      function vilnisKaleid1() {
+        //by TREPS
+        //VILNIS KALEID1
+
+        osc(7, 0.01, 2)
+          .pixelate(40, 20)
+          .modulate(osc(-7, -0.1, 2), 0.3)
+          .rotate(1.57)
+          .modulateScale(osc(7, -0.01, 2), 1.5, 1.5)
+          .kaleid()
+          .invert()
+          .out(o0);
+
+        osc(-7, -0.01, 2)
+          .pixelate(80, 40)
+          .modulate(osc(7, -0.02, 2), 0.3)
+          .rotate(1.57)
+          .modulateScale(osc(7, -0.03, 2), 1.5, 2.5)
+          .modulate(src(o0), 0)
+          .kaleid(8)
+          .repeat()
+          .invert()
+
+          .out(o3);
+
+        osc(-7, -0.01, 2)
+          .pixelate(80, 40)
+          .modulate(osc(7, 0.01, 2), 0.3)
+          .rotate(1.57)
+          .modulateScale(osc(7, -0.1, 2), 1.5, 2.5)
+          .modulate(src(o0), 0)
+          .kaleid(2)
+          .repeat(1)
+          .invert()
+
+          .out(o2);
+
+        //src(o0)
+        osc(7, 0.01, 2)
+          .pixelate(40, 20)
+          .modulate(osc(-7, -0.01, 2), 0.3)
+          .rotate(1.57)
+          .modulateScale(osc(7, -0.01, 2), 1.5, 1.5)
+          .kaleid()
+          .invert()
+          .modulate(src(o2), 0.3)
+          .rotate(1.57)
+          .modulateScale(osc(7, -0.1, 2), 1.5, 0.5)
+          .kaleid(2)
+          .repeat(1, 1)
+          .scale(0.6)
+          .invert()
+
+          .out(o1);
+
+        render(o1);
+      }
+      function vilnisKaleid2() {
+        //by TREPS
+        //VILNIS KALEID2
+
+        osc(7, 0.01, 2)
+          .pixelate(40, 20)
+          .modulate(osc(-7, -0.1, 2), 0.3)
+          .rotate(1.57)
+          .modulateScale(osc(7, -0.01, 2), 1.5, 1.5)
+          .kaleid()
+          .invert()
+          .out(o0);
+
+        osc(-7, -0.01, 2)
+          .pixelate(80, 40)
+          .modulate(osc(7, -0.02, 2), 0.3)
+          .rotate(1.57)
+          .modulateScale(osc(7, -0.03, 2), 1.5, 2.5)
+          .modulate(src(o0), 0)
+          .kaleid(8)
+          .repeat()
+          .invert()
+
+          .out(o3);
+
+        osc(-7, -0.01, 2)
+          .pixelate(80, 40)
+          .modulate(osc(7, 0.01, 2), 0.3)
+          .rotate(1.57)
+          .modulateScale(osc(7, -0.1, 2), 1.5, 2.5)
+          .modulate(src(o0), 0)
+          .kaleid(2)
+          .repeat(1)
+          .invert()
+
+          .out(o2);
+
+        //src(o0)
+        osc(7, 0.01, 2)
+          .pixelate(40, 20)
+          .modulate(osc(-7, -0.01, 2), 0.3)
+          .rotate(1.57)
+          .modulateScale(osc(7, -0.01, 2), 1.5, 1.5)
+          .kaleid()
+          .invert()
+          .modulate(src(o2), 0.3)
+          .rotate(1.57)
+          .modulateScale(osc(7, -0.1, 2), 1.5, 0.5)
+          .kaleid(2)
+          .repeat(1, 1)
+          .scale(0.6)
+          .invert()
+
+          .out(o1);
+
+        render(o2);
+      }
+      function vilnisKaleid3() {
+        //by TREPS
+        //VILNIS KALEID3
+
+        osc(7, 0.01, 2)
+          .pixelate(40, 20)
+          .modulate(osc(-7, -0.1, 2), 0.3)
+          .rotate(1.57)
+          .modulateScale(osc(7, -0.01, 2), 1.5, 1.5)
+          .kaleid()
+          .invert()
+          .out(o0);
+
+        osc(-7, -0.01, 2)
+          .pixelate(80, 40)
+          .modulate(osc(7, -0.02, 2), 0.3)
+          .rotate(1.57)
+          .modulateScale(osc(7, -0.03, 2), 1.5, 2.5)
+          .modulate(src(o0), 0)
+          .kaleid(8)
+          .repeat()
+          .invert()
+
+          .out(o3);
+
+        osc(-7, -0.01, 2)
+          .pixelate(80, 40)
+          .modulate(osc(7, 0.01, 2), 0.3)
+          .rotate(1.57)
+          .modulateScale(osc(7, -0.1, 2), 1.5, 2.5)
+          .modulate(src(o0), 0)
+          .kaleid(2)
+          .repeat(1)
+          .invert()
+
+          .out(o2);
+
+        //src(o0)
+        osc(7, 0.01, 2)
+          .pixelate(40, 20)
+          .modulate(osc(-7, -0.01, 2), 0.3)
+          .rotate(1.57)
+          .modulateScale(osc(7, -0.01, 2), 1.5, 1.5)
+          .kaleid()
+          .invert()
+          .modulate(src(o2), 0.3)
+          .rotate(1.57)
+          .modulateScale(osc(7, -0.1, 2), 1.5, 0.5)
+          .kaleid(2)
+          .repeat(1, 1)
+          .scale(0.6)
+          .invert()
+
+          .out(o1);
+
+        render(o3);
+      }
+      function grusgrus() {
+        osc(2, 0.01, 2).out(o1);
+        render(o1);
+      }
+    </script>
+  </body>
+</html>
+
+
+
+/* CSS files add styling rules to your content */
+
+body,
+html {
+  font-family: helvetica, arial, sans-serif;
+  margin: 10px;
+  /*  background-color: pink; */
+}
+
+h1 {
+  font-style: italic;
+  color: white;
+  font-size: 15px;
+  margin: 50px;
+  mix-blend-mode: difference;
+  text-align: center;
+  justify-content: center;
+}
+h2 {
+/*   font-style: italic; */
+  color: #a020f0;
+  font-size: 40px;
+  font-style: bold;
+  margin: -100px;
+  mix-blend-mode: difference;
+  text-align: center;
+}
+#idk  {
+/*   max-width: 600px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -130px;
+}
+  .waviy {
+  position: relative;
+    width: 200px;
+    text-align: center;
+    mix-blend-mode: difference;
+}
+  .waviy span {
+  position: relative;
+  display: inline-block;
+  color: white;
+  font-size: 35px;
+  text-transform: uppercase;
+  animation: flip 6s infinite;
+  animation-delay: calc(.5s * var(--i))
+}
+  @keyframes flip {
+    0%,
+    30% {
+      transform: rotateY(360deg);
+    }
+  }
+
+
+
+button {
+  display: inline-block;
+  background-color: white;
+  mix-blend-mode: difference;
+  border-radius: 8px;
+  border: 2px;
+  font-size: 16px;
+  font-style: bold;
+  padding: 10px 24px;
+  margin: 10px;
+  width: 120px;
+  height: 40px;
+  justify-content: center;
+}
+button:hover {
+  font-style: bold;
+  background-color: yellow;
+  mix-blend-mode: difference;
+}
+
+
+#myCanvas {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: -4;
+}
+
+
+
+
+
